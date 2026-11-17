@@ -1,0 +1,28 @@
+WARGA +62 SIMULATOR - PAKET APK (PWABuilder) & VERCEL
+=====================================================
+Isi paket:
+- index.html            : seluruh game (offline, progres tersimpan di HP pemain)
+- manifest.webmanifest  : identitas aplikasi (nama, ikon, warna, mode layar penuh)
+- sw.js                 : service worker agar bisa diinstall & dimainkan offline
+- icons/                : ikon aplikasi 192 & 512 px (termasuk maskable Android)
+- vercel.json           : pengaturan hosting Vercel
+
+LANGKAH 1 - Deploy ke Vercel (supaya punya link HTTPS permanen)
+1. Ekstrak zip ini. Upload SEMUA isinya (bukan foldernya) ke repository GitHub baru.
+2. vercel.com > Add New > Project > Import repository.
+3. Framework Preset: "Other". Build Command & Output Directory: kosongkan. Deploy.
+4. Kamu mendapat link, misalnya https://warga62.vercel.app
+
+LANGKAH 2 - Buat APK di PWABuilder
+1. Buka https://www.pwabuilder.com lalu tempel link Vercel kamu, klik Start.
+2. Pilih "Package For Stores" > Android > "Generate Package".
+3. Pilih opsi "Other Android" / unduh paket. File .apk ada di dalam zip hasil unduhan.
+4. Simpan juga file signing key (.keystore) dari PWABuilder untuk update versi berikutnya.
+
+LANGKAH 3 - Install tanpa Play Store
+1. Kirim file .apk ke HP Android (WhatsApp, Drive, USB).
+2. Buka file .apk, izinkan "Install dari sumber tidak dikenal" bila diminta.
+3. Selesai - game muncul di layar utama seperti aplikasi biasa.
+
+Alternatif cepat tanpa APK: buka link Vercel di Chrome Android > menu titik tiga >
+"Install aplikasi" / "Tambahkan ke layar utama".
